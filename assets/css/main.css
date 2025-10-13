@@ -1,7 +1,7 @@
 /*
 ============================
 Name:  PayCoin Crypto
-Version: 1.0.0
+Ver ion: 1.0.0
 Description: PayCoin Crypto
 Author:  VikingLab
 Author URI: https://themeforest.net/user/vikinglab/portfolio
@@ -13758,7 +13758,7 @@ li.has-dropdown1 span {
 
 
   .tokenomics {
-    padding: 80px 80px;
+    padding: 40px 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13933,7 +13933,7 @@ li.has-dropdown1 span {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 30px;
     padding: 20px 20px;
     gap: 20px;
 }
@@ -13970,6 +13970,9 @@ li.has-dropdown1 span {
     align-items: center;
     gap: 10px;
     border: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
 }
 
 .s02button .text {
@@ -14089,79 +14092,5 @@ li.has-dropdown1 span {
     }
 }
     
-
-
-
-
-
-
-/* @media (max-width: 767px) {
-    .section10 {
-        padding: 10px;
-    }
-
-    .s10head {
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
-
-    .new2 {
-        font-size: 15px;
-        padding: 5px 10px;
-    }
-
-    .s02button {
-        width: 180px;
-        height: 40px;
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    
-    .section10 {
-        padding: 10px ;
-        width: 300px; 
-    }
-
-    .s10head {
-        font-size: 32px;
-    }
-
-    .new2 {
-        font-size: 15px;
-        padding: 0;
-    }
-
-    .s02button {
-        width: 170px;
-        height: 38px;
-    }
-
-    .s02button .text {
-        font-size: 16px;
-        line-height: 20px;
-    }
-}
-
-@media (max-width: 340px) {
-    .section10 {
-        padding: 10px ;
-        width: 260px;
-    }
-
-    .new2 {
-        font-size: 13px;
-    }
-}
-     */
-
-
-
-
-
-
-
-
 
 

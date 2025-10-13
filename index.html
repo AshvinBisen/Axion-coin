@@ -134,12 +134,12 @@
                 <div class="header2-buttons">
                   <div class="button">
                     <a
-                      href="#"
+                      href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x7aeA114ce8488B01f1254e1CA22786A8eea938a1"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="btn_theme btn_theme_active mt_40 wow fadeInDown"
                       data-wow-duration="0.8s"
-                      >But Token <i class="fa-solid fa-arrow-right"></i
+                      >Buy Token <i class="fa-solid fa-arrow-right"></i
                       ><span></span
                     ></a>
                   </div>
@@ -215,7 +215,7 @@
 
         <div class="mobile-button">
           <a
-            href="#"
+            href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x7aeA114ce8488B01f1254e1CA22786A8eea938a1"
             target="_blank"
             rel="noopener noreferrer"
             class="btn_theme btn_theme_active mt_40 wow fadeInDown"
@@ -259,7 +259,7 @@
                 data-aos-duration="1300"
               >
                 <a
-                  href="#"
+                  href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x7aeA114ce8488B01f1254e1CA22786A8eea938a1"
                   class="btn_theme btn_theme_active mt_40 wow fadeInDown"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -623,14 +623,21 @@
             </div>
 
       <div class="s10three" style="text-align:center;">
-        <p id="address" class="s10para" aria-live="polite">0x671de8f6d6B94d7894509b1D732Ea43302885d6b3</p>
+        <p id="address" class="s10para" aria-live="polite">0x7aeA114ce8488B01f1254e1CA22786A8eea938a1</p>
 
+                <!-- Button -->
         <div class="controls">
           <button class="s02button" id="copyButton" type="button" aria-label="Copy contract address">
             COPY ADDRESS
           </button>
-          <!-- <div id="copyFeedback" class="copy-feedback" aria-hidden="true">Copied!</div> -->
         </div>
+
+        <!-- Feedback Message -->
+        <p id="copyFeedback" style="display:none; color:green; font-weight:bold; margin-top:10px;">
+          Copied Address
+        </p>
+
+        
       </div>
     </section>
           
@@ -1487,7 +1494,7 @@
 
                 <ul class="menu-list">
                   <li>
-                    <a href="#" target="_blank" rel="noopener noreferrer"
+                    <a href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0x7aeA114ce8488B01f1254e1CA22786A8eea938a1" target="_blank" rel="noopener noreferrer"
                       >Buy Now</a
                     >
                   </li>
@@ -1575,57 +1582,43 @@
 
     <!--===== FOOTER AREA END =======-->
 
-    <script>
-    (function(){
-      const contractAddress = "0x671de8f6d6B94d7894509b1D732Ea43302885d6b3";
-      const btn = document.getElementById('copyButton');
-      const feedback = document.getElementById('copyFeedback');
-      const addressEl = document.getElementById('address');
+    <!-- Script -->
+<script>
+(function(){
+  const contractAddress = "0x7aeA114ce8488B01f1254e1CA22786A8eea938a1";
+  const btn = document.getElementById('copyButton');
+  const feedback = document.getElementById('copyFeedback');
+  const addressEl = document.getElementById('address');
 
-      // Ensure displayed address matches variable (easy to update later)
-      addressEl.textContent = contractAddress;
+  // Display the address dynamically
+  addressEl.textContent = contractAddress;
 
-      async function showFeedback() {
-        feedback.classList.add('visible');
-        feedback.setAttribute('aria-hidden', 'false');
-        // hide after 2s
-        setTimeout(()=> {
-          feedback.classList.remove('visible');
-          feedback.setAttribute('aria-hidden', 'true');
-        }, 2000);
-      }
+  btn.addEventListener('click', async function(){
+    try {
+      // Copy to clipboard
+      await navigator.clipboard.writeText(contractAddress);
 
-      btn.addEventListener('click', async function(){
-        // modern API with fallback
-        try {
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            await navigator.clipboard.writeText(contractAddress);
-          } else {
-            // fallback old approach
-            const input = document.createElement('input');
-            input.value = contractAddress;
-            document.body.appendChild(input);
-            input.select();
-            document.execCommand('copy');
-            document.body.removeChild(input);
-          }
-          await showFeedback();
-        } catch (err) {
-          // final fallback: select the address so user can copy manually
-          try {
-            const r = document.createRange();
-            r.selectNodeContents(addressEl);
-            const s = window.getSelection();
-            s.removeAllRanges();
-            s.addRange(r);
-            alert('Copy failed automatically — address selected. Press Ctrl+C (or Cmd+C) to copy.');
-          } catch (e) {
-            alert('Copy not supported in this browser. Please copy the address manually:\n\n' + contractAddress);
-          }
-        }
-      });
-    })();
-  </script>
+      // Show message
+      feedback.style.display = 'block';
+
+      // Hide after 2 seconds
+      setTimeout(() => {
+        feedback.style.display = 'none';
+      }, 2000);
+    } catch (err) {
+      // If copy fails, still show the message (optional)
+      feedback.textContent = 'Copy failed. Please copy manually.';
+      feedback.style.display = 'block';
+      setTimeout(() => {
+        feedback.style.display = 'none';
+        feedback.textContent = 'Copied Address';
+      }, 3000);
+    }
+  });
+})();
+</script>
+
+
 
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/aos.js"></script>
