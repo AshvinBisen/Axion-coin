@@ -355,7 +355,7 @@ body.body.unic {
 }
 
 .sp2 {
-  padding: 120px 0px;
+  padding: 50px 0px;
 }
 
 .pt100 {
@@ -5130,11 +5130,11 @@ body.body.unic {
 
 .token-sell .token_sale {
   position: relative;
-  margin: 60px 50px 0 50px;
+  margin: 30px 50px 0 50px;
 }
 .token-sell .token_sale .shape1 {
   position: absolute;
-  top: 62px;
+  top: 30px;
   left: -115px;
 }
 @media (max-width: 767px) {
@@ -5144,7 +5144,7 @@ body.body.unic {
 }
 .token-sell .token_sale .shape2 {
   position: absolute;
-  top: 64px;
+  top: 30px;
   right: -119px;
   z-index: 9;
 }
@@ -5155,7 +5155,7 @@ body.body.unic {
 }
 .token-sell .token_sale .shape3 {
   position: absolute;
-  bottom: 52px;
+  bottom: 30px;
   left: -114px;
   z-index: -9;
 }
@@ -5166,7 +5166,7 @@ body.body.unic {
 }
 .token-sell .token_sale .shape4 {
   position: absolute;
-  bottom: 51px;
+  bottom: 30px;
   right: -109px;
   z-index: -9;
 }
@@ -13758,7 +13758,7 @@ li.has-dropdown1 span {
 
 
   .tokenomics {
-    padding: 40px 80px;
+    padding: 20px 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13770,7 +13770,7 @@ li.has-dropdown1 span {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 80px 10px;
 }
 
 .token-img {
@@ -14094,3 +14094,117 @@ li.has-dropdown1 span {
     
 
 
+
+
+
+
+
+
+
+
+
+
+  /* Section wrapper */
+    .partners-section{
+      padding:48px 16px;
+      border:1px solid transparent;
+      border-image-slice:1;
+    }
+
+    .partners-inner{
+      max-width:1280px;
+      margin:0 auto;
+    }
+
+    /* Title pill */
+    .partners-title{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .partners-title .pill{
+      display:inline-block;
+      padding:10px 20px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.25);
+      background:transparent;
+      color:#fff;
+      font-size:20px;
+      line-height:110%;
+      font-weight:400;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    /* Slider viewport */
+    .partners-viewport{
+      overflow:hidden;
+      position:relative;
+      border-radius:8px;
+      padding:8px 0;
+    }
+
+    /* The moving track */
+    .partners-track{
+      display:flex;
+      gap:40px;
+      align-items:center;
+      animation: scroll 24s linear infinite;
+      will-change:transform;
+    }
+
+    /* Pause on hover */
+    .partners-viewport:hover .partners-track{
+      animation-play-state: paused;
+    }
+
+    /* Each slide */
+    .partner{
+      position:relative;
+      flex:0 0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px;
+      min-width:120px;
+    }
+
+    /* Logo image */
+    .partner img{
+      display:block;
+      max-width:140px;
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      transition:transform .3s ease;
+    }
+
+    .partner:hover img{
+      transform:translateY(-6px);
+    }
+
+    
+
+    /* Responsive logo widths */
+    @media (min-width: 320px){
+      .partner{ min-width:110px }
+      .partner img{ max-width:90px }
+    }
+    @media (min-width: 640px){
+      .partner{ min-width:140px }
+      .partner img{ max-width:120px }
+    }
+    @media (min-width: 1024px){
+      .partner{ min-width:170px }
+      .partner img{ max-width:150px }
+    }
+
+    /* Continuous scroll animation */
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* reduce motion */
+    @media (prefers-reduced-motion: reduce) {
+      .partners-track { animation: none; }
+    }
