@@ -32,4 +32,3 @@ jobs:
           server-dir: /
           exclude: |
             **/.git*
-            **/.github*
