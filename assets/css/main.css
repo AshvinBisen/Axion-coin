@@ -3487,10 +3487,11 @@ body.body.unic {
   }
 }
 .about1 .about1-images .image2 {
-  position: absolute;
-  bottom: 80px;
-  left: 140px;
+  position: relavite;
+  /* bottom: 80px;
+  left: 140px; */
   z-index: -2;
+  margin-bottom: 30px;
 }
 .about1 .about1-images .image3 {
   position: absolute;
@@ -3592,37 +3593,37 @@ body.body.unic {
 .about2 {
   position: relative;
 }
-.about2 .about2-images {
+/* .about2 .about2-images {
   position: relative;
   height: 480px;
-}
+} */
 .about2 .about2-images .image1 {
   position: absolute;
   left: 0;
   top: 0;
 }
-.about2 .about2-images .image2 {
+/* .about2 .about2-images .image2 {
   position: absolute;
   left: 30px;
   top: 0px;
-  border-radius: 4px;
+  border-radius: 4px; */
   /* background: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px); */
   /* padding: 16px; */
-  right: 30px;
-}
-@media (max-width: 767px) {
+  /* right: 30px;
+} */
+/* @media (max-width: 767px) {
   .about2 .about2-images .image2 {
     left: 0;
   }
-}
-.about2 .about2-images .image3 {
+} */
+/* .about2 .about2-images .image3 {
   position: absolute;
   right: 0;
   top: -30px;
   width: 130px;
-}
+} */
 .about2 .about2-boxs {
   padding-left: 70px;
   position: relative;
@@ -4904,13 +4905,13 @@ body.body.unic {
   bottom: -100px;
   right: 0;
 }
-.mobile-area .mobile-area .main-image {
+/* .mobile-area .mobile-area .main-image {
   position: absolute;
   right: 0px;
   top: 0;
   left: 60px;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+} */
+/* @media only screen and (min-width: 768px) and (max-width: 991px) {
   .mobile-area .mobile-area .main-image {
     position: absolute;
     right: 0px;
@@ -4918,8 +4919,8 @@ body.body.unic {
     left: 0;
     bottom: 0;
   }
-}
-@media (max-width: 767px) {
+} */
+/* @media (max-width: 767px) {
   .mobile-area .mobile-area .main-image {
     position: absolute;
     right: 0px;
@@ -4927,7 +4928,7 @@ body.body.unic {
     left: 0;
     bottom: 0;
   }
-}
+} */
 .mobile-area .mobile-area .coin {
   position: absolute;
   top: -40px;
@@ -5823,13 +5824,13 @@ body.body.unic {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .others2 .main-image {
     margin-left: 0;
-    margin-right: 100px;
+    margin-right: 20px;
   }
 }
 @media (max-width: 767px) {
   .others2 .main-image {
     margin-left: 0;
-    margin-right: 100px;
+    margin-right: 10px;
     margin-top: 30px;
   }
 }
@@ -6748,7 +6749,7 @@ body.body2 {
 .hero-area2 .images-area .image1 {
   position: absolute;
   bottom: 0px;
-  right: 0;
+  /* right: 0; */
 }
 .hero-area2 .images-area .image2 {
   width: 130px;
@@ -7067,7 +7068,7 @@ body.body2 {
 }
 
 .hero3-slider {
-  padding-top: 100px;
+  padding-top: 30px;
   position: relative;
 }
 .hero3-slider .heading h5 {
