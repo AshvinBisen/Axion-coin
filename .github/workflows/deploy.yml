@@ -1,0 +1,34 @@
+name: Deploy HTML to cPanel (Hostinger Fix)
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: DEBUG - Show Secrets (Safe)
+        run: |
+          echo "FTP_SERVER: ${{ secrets.FTP_SERVER }}"
+          echo "FTP_USERNAME: ${{ secrets.FTP_USERNAME }}"
+          echo "LOCAL FILES:"
+          ls -la
+
+      - name: Deploy HTML to Server via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp         
+          port: 21
+          local-dir: ./           
+          server-dir: /
+          exclude: |
+            **/.git*
